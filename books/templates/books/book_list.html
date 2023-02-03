@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Book List
+{% endblock title %}
+
+{% block content %}
+<h1>All books</h1>
+{% for book in book_list %}
+<ul>
+    <li style="display: inline; border-bottom:2px solid red">Title: {{ book.title }}</li>
+    <li>Subtitle: {{ book.subtitle }}</li>
+    <li>Author: {{ book.author }}</li>
+    <li>ISBN: {{ book.isbn }}</li>
+</ul>
+{% endfor %}
+{% endblock content %}
